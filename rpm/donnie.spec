@@ -6,6 +6,8 @@
 Name:       donnie
 
 # >> macros
+%define __provides_exclude_from ^%{_datadir}/.*$
+%define __requires_exclude ^libixml|libthreadutil|libupnp|libupnpp.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -22,14 +24,12 @@ Source0:    %{name}-%{version}.tar.gz
 Source1:    %{name}-rpmlintrc
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   mpris-qt5
-Requires:  mpris-qt5-devel
-Requires:   libupnpp11
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-#BuildRequires:  pkgconfig(mpris-qt5-devel)
-#BuildRequires:  pkgconfig(libupnpp11)
+BuildRequires:  libupnpp >= 0.15.1
+BuildRequires:  pkgconfig(mpris-qt5-devel)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
