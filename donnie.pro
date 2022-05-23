@@ -27,7 +27,6 @@ OTHER_FILES += qml/donnie.qml \
     qml/pages/FirstPage.qml \
     qml/pages/SecondPage.qml \
     rpm/donnie.spec \
-    rpm/donnie.yaml \
     donnie.desktop
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
@@ -73,7 +72,6 @@ DISTFILES += \
     qml/components/ConfirmDialog.qml \
     qml/components/EditURIDialog.qml \
     translations/*.ts \
-    rpm/donnie.yaml \
     rpm/donnie.spec
 
 HEADERS += \
@@ -91,15 +89,15 @@ HEADERS += \
     src/upnpsetnexttrackrunnable.h \
     src/upnpgetmetadatarunnable.h
     
-QMAKE_RPATHDIR += /usr/share/donnie/lib
+#QMAKE_RPATHDIR += /usr/share/donnie/lib
 
-LIBS.path = /usr/share/donnie/lib/
+#LIBS.path = /usr/share/donnie/lib/
 
 # libupnp6
-LIBS.files  = /usr/lib/libixml.so.2
-LIBS.files += /usr/lib/libthreadutil.so.6
-LIBS.files += /usr/lib/libupnp.so.6
+#LIBS.files  = /usr/lib/libixml.so.2
+#LIBS.files += /usr/lib/libthreadutil.so.6
+#LIBS.files += /usr/lib/libupnp.so.6
 # libupnpp
-LIBS.files += /usr/lib/libupnpp.so.6
+#LIBS.files += /usr/lib/libupnpp.so.6
 
-INSTALLS += LIBS
+#INSTALLS += LIBS

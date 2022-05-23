@@ -1,0 +1,15 @@
+possible fix for crash
+--- control/avtransport.hxx	Wed May 31 20:53:37 2017
++++ control/avtransport.hxx	Mon Jun 05 09:58:47 2017
+@@ -56,7 +56,9 @@
+     }
+ 
+     AVTransport() {}
+-    virtual ~AVTransport() { }
++    virtual ~AVTransport() {
++        unregisterCallback();
++    }
+ 
+     int setAVTransportURI(const std::string& uri, const std::string& metadata,
+                           int instanceID=0)
+ 

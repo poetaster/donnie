@@ -1,0 +1,24 @@
+diff -u -r libupnpp-0.15.2\configure.ac fixed\configure.ac
+--- configure.ac	Wed May 31 20:53:36 2017
++++ configure.ac	Wed May 31 21:08:56 2017
+@@ -49,7 +49,7 @@
+ 
+ # Check that std::future is available.
+ AC_LANG_PUSH([C++])
+-CXXFLAGS="-std=c++11 $CXXFLAGS"
++CXXFLAGS="-std=c++11 -Og $CXXFLAGS"
+ AC_MSG_CHECKING([whether std::future is available])
+ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <future>]],
+ 		[[std::future<int> f;]])],
+diff -u -r libupnpp-0.15.2\Makefile.am fixed\Makefile.am
+--- Makefile.am	Wed May 31 20:53:36 2017
++++ Makefile.am	Wed May 31 21:08:12 2017
+@@ -3,7 +3,7 @@
+ 	            ${upnp_CFLAGS} ${curl_CFLAGS} ${expat_CFLAGS} \
+ 	            -DDATADIR=\"${pkgdatadir}\" -DCONFIGDIR=\"${sysconfdir}\"
+ 
+-AM_CXXFLAGS = -std=c++11
++AM_CXXFLAGS = -std=c++11 -Og
+ 
+ lib_LTLIBRARIES = libupnpp.la
+ 

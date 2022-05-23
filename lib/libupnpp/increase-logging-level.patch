@@ -1,0 +1,12 @@
+Increase logging level
+--- libupnpp/log.h	Wed May 31 20:53:37 2017
++++ libupnpp/log.h	Wed May 31 21:14:45 2017
+@@ -49,7 +49,7 @@
+ 
+ // Can't use the symbolic Logger::LLXX names in preproc. 6 is LLDEB1
+ #ifndef LOGGER_STATICVERBOSITY
+-#define LOGGER_STATICVERBOSITY 5
++#define LOGGER_STATICVERBOSITY 7
+ #endif
+ 
+ class Logger {

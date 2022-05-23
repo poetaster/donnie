@@ -1,0 +1,21 @@
+gcc complains over missing #include
+--- libupnpp/control/service.hxx	Wed May 31 19:53:38 2017
++++ libupnpp/control/service.hxx	Sun Nov 29 14:22:51 2020
+@@ -24,6 +24,7 @@
+ 
+ #include <iostream>                     // for basic_ostream, operator<<, etc
+ #include <string>                       // for string, operator<<, etc
++#include <functional>
+ 
+ #include <vector>                       // for vector
+ 
+--- libupnpp/device/device.hxx	Wed May 31 19:53:38 2017
++++ libupnpp/device/device.hxx	Sun Nov 29 14:24:24 2020
+@@ -25,6 +25,7 @@
+ #include <unordered_map>
+ #include <memory>
+ #include <string>
++#include <functional>
+ #include <vector>
+ 
+ #include "libupnpp/soaphelp.hxx"

@@ -1,0 +1,11 @@
+diff -u -r libupnpp-0.15.2\libupnpp\control\mediarenderer.cxx fixed\libupnpp\control\mediarenderer.cxx
+--- libupnpp/control/mediarenderer.cxx	Wed May 31 20:53:37 2017
++++ libupnpp/control/mediarenderer.cxx	Fri Jun 02 19:35:11 2017
+@@ -144,6 +144,7 @@
+             it != desc()->services.end(); it++) {
+         if (AVTransport::isAVTService(it->serviceType)) {
+             avtl = AVTH(new AVTransport(*desc(), *it));
++            LOGDEB("MediaRenderer: new AVTransport created" << endl);
+             break;
+         }
+     }
