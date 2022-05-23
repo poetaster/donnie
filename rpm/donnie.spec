@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  libupnpp >= 0.15.1
+BuildRequires:  pkgconfig(libupnpp)
 BuildRequires:  pkgconfig(mpris-qt5-devel)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils

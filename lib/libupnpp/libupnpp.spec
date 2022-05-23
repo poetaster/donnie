@@ -5,7 +5,7 @@ Release:        0
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://www.lesbonscomptes.com/updmpdcli
-Source0:        https://framagit.org/medoc92/libupnpp/-/archive/libupnpp-v0.15.2/libupnpp-libupnpp-v0.15.2.tar.gz
+Source0:        https://github.com/poetaster/donnie/raw/master/lib/libupnpp/libupnpp-0.15.2.tar.gz
 Requires(pre):  shadow-utils
 Requires(post): systemd
 Requires(preun): systemd
