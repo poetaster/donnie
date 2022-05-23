@@ -1,11 +1,11 @@
 Summary:        C++ wrapper for libupnp
 Name:           libupnpp
-Version:        0.15.2
+Version:        0.16.2
 Release:        0
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://www.lesbonscomptes.com/updmpdcli
-Source0:        https://github.com/poetaster/donnie/raw/master/lib/libupnpp/libupnpp-0.15.2.tar.gz
+Source0: 	https://www.lesbonscomptes.com/upmpdcli/downloads/libupnpp-0.16.2.tar.gz
 Requires(pre):  shadow-utils
 Requires(post): systemd
 Requires(preun): systemd
@@ -18,11 +18,11 @@ BuildRequires:  gcc-c++
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 #BuildRequires:  systemd-units
-BuildRoot:      %{_tmppath}/%{name}-build
-Patch0:			compiler-flags.patch
-Patch1:			increase-logging-level.patch
-Patch2:			extra-debug-output.patch
-Patch3:         include-functional.patch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+Patch0:		compiler-flags.patch
+#Patch1:	increase-logging-level.patch
+#Patch2:	extra-debug-output.patch
+#Patch3:        include-functional.patch
 
 %description
 libupnpp is a C++ wrapper over libupnp. It exists mostly for supporting
@@ -33,7 +33,7 @@ upmpdcli and upplay
 %patch0
 # %patch1
 # %patch2
-%patch3
+#%patch3
 
 %build
 ./autogen.sh
