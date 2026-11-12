@@ -15,7 +15,7 @@ Name:       donnie
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    UPnP Controller with built in Player
-Version:    0.8
+Version:    0.9
 Release:    1
 Group:      Applications/Multimedia
 License:    MIT
@@ -28,8 +28,8 @@ BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  pkgconfig(libupnpp)
-BuildRequires:  pkgconfig(mpris-qt5-devel)
+BuildRequires:  libupnp-devel
+BuildRequires:  mpris-qt5-devel
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
@@ -76,6 +76,10 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}/translations
 # >> files
 %changelog
+* Thu Nov 12 2026 Mark Washeim <blueprint@poetaster.de>
+- Corrent mpris artist value set
+- Remove unused cover art and add cover texts
+
 * Fri Jun 7 2019 Willem-Jan de Hoog <wdehoog@exalondelft.nl> 0.8
 - Translations update (de,es,ru)
 
