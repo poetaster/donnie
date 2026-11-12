@@ -15,7 +15,7 @@ Name:       donnie
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    UPnP Controller with built in Player
-Version:    0.9
+Version:    1.0
 Release:    1
 Group:      Applications/Multimedia
 License:    MIT
