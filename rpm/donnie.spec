@@ -16,7 +16,7 @@ Name:       donnie
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    UPnP Controller with built in Player
 Version:    1.0
-Release:    1
+Release:    2
 Group:      Applications/Multimedia
 License:    MIT
 URL:        https://github.com/wdehoog/donnie

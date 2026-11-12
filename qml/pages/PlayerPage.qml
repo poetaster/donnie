@@ -158,7 +158,8 @@ Page {
     function updateMprisForTrackMetaData(track) {
         var meta = {};
         meta.Title = trackMetaText1;
-        meta.Artist = trackMetaText2;
+        meta.Artist = track.artist;
+        console.log(track.artist);
         meta.Album = track.album;
         meta.Length = 0;
         meta.ArtUrl = track.albumArtURI;
