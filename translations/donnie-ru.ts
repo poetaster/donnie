@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Copyright (C) 2018 Willem-Jan de Hoog</source>
-        <extracomment>I doubt this needs to be translated - The first word has to be changed.</extracomment>
+        <extracomment>I doubt this needs to be translated</extracomment>
         <translation>Автор (C) 2018 Willem-Jan de Hoog</translation>
     </message>
     <message>
@@ -469,10 +469,6 @@ Can not Resume.</source>
     <message>
         <source>Long Description</source>
         <translation>Полное описание</translation>
-    </message>
-    <message>
-        <source>User entered URI</source>
-        <translation>Пользовательский URI</translation>
     </message>
 </context>
 <context>

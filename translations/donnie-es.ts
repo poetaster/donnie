@@ -470,10 +470,6 @@ No se puede reanudar</translation>
         <source>Long Description</source>
         <translation>Descripción larga</translation>
     </message>
-    <message>
-        <source>User entered URI</source>
-        <translation>Usuario a ingresado IRU</translation>
-    </message>
 </context>
 <context>
     <name>UPnPDeviceDetails</name>

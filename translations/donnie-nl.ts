@@ -470,10 +470,6 @@ Can not Resume.</source>
         <source>Long Description</source>
         <translation>Uitgebreide beschrijving</translation>
     </message>
-    <message>
-        <source>User entered URI</source>
-        <translation>URI ingevoerd door gebruiker</translation>
-    </message>
 </context>
 <context>
     <name>UPnPDeviceDetails</name>

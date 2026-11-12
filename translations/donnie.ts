@@ -467,10 +467,6 @@ Can not Resume.</source>
         <source>Long Description</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>User entered URI</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>UPnPDeviceDetails</name>
