@@ -8,8 +8,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtMultimedia 5.5
-import org.nemomobile.configuration 1.0
-
+import Nemo.DBus 2.0
+import Nemo.Configuration 1.0
+import Amber.Mpris 1.0
 import "../UPnP.js" as UPnP
 
 Page {
@@ -119,11 +120,14 @@ Page {
         imageItemSource = track.albumArtURI ? track.albumArtURI : defaultImageSource
         cover.updateDisplayData(track.albumArtURI, track.titleText, track.upnpclass)
         updatePlayIcons()
-
+        //console.log(JSON.stringify(track))
         trackMetaText1 = track.titleText
-        trackMetaText2 = track.metaText
+        //trackMetaText2 = track.metaText // is Artist - Album -
+        trackMetaText2 = track.artist
         trackClass = track.upnpclass;
-
+        // globals
+        currentArtist = track.artist
+        currentAlbum = track.titleText
         updateMprisForTrack(track);
         app.saveLastPlayingJSON(track, trackListModel)
     }

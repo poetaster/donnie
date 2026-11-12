@@ -18,7 +18,16 @@ CoverBackground {
     property string playIconSource : "image://theme/icon-cover-play"
     //property alias coverProgressBar : coverProgressBar
     property string labelText : ""
-
+    property string labelText2 : ""
+    Connections {
+        target: app
+        onCurrentArtistChanged: {
+            labelText = currentArtist
+        }
+        onCurrentAlbumChanged: {
+            labelText2 = currentAlbum
+        }
+   }
     Column {
         width: parent.width
 
@@ -64,7 +73,23 @@ CoverBackground {
                 duration: 3000
             }
         }
+        Text {
+            id: label2
+            anchors.left: parent.left
+            anchors.right: parent.right
+            text: labelText2
+            horizontalAlignment: Text.AlignHCenter
+            visible: imageSource === defaultImageSource
+            font.pixelSize: Theme.fontSizeSmall
+            color: Theme.primaryColor
 
+            NumberAnimation on x {
+                from: parent.width
+                to: -1 * label.width
+                loops: Animation.Infinite
+                duration: 3000
+            }
+        }
         ProgressBar {
             id: progressBar
             valueText: ""
@@ -102,8 +127,8 @@ CoverBackground {
     }
 
     function updateDisplayData(imageSource, text, trackClass) {
-        cover.imageSource = imageSource ? imageSource : defaultImageSource
-        labelText = text
+        //cover.imageSource = imageSource ? imageSource : defaultImageSource
+        //labelText = text
         if(trackClass === UPnP.AudioItemType.AudioBroadcast) {
             progressBar.label = ""
             progressBar.value = 0

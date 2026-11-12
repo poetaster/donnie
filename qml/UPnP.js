@@ -81,7 +81,7 @@ function getDurationString(d) {
 }
 
 function repeatChar(count, ch) {
-    if (count == 0) {
+    if (count === 0) {
         return "";
     }
     var count2 = count / 2;

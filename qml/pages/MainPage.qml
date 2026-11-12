@@ -7,8 +7,9 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import org.nemomobile.configuration 1.0
-
+import Nemo.DBus 2.0
+import Nemo.Configuration 1.0
+import Amber.Mpris 1.0
 import "../UPnP.js" as UPnP
 
 Page {

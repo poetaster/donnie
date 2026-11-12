@@ -7,17 +7,15 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import org.nemomobile.configuration 1.0
-//import org.freedesktop.contextkit 1.0
-//import org.nemomobile.connectivity 1.0
-//import Nemo.DBus 2.0
-import org.nemomobile.dbus 2.0
-
+import Nemo.DBus 2.0
+import Nemo.Configuration 1.0
+import Amber.Mpris 1.0
 import "pages"
 import "cover"
 import "UPnP.js" as UPnP
 
 import "components"
+
 
 ApplicationWindow
 {
@@ -28,8 +26,9 @@ ApplicationWindow
     property var currentServer
     property var currentRenderer
     property var currentServerSearchCapabilities
-    property bool useBuiltInPlayer: false;
-
+    property bool useBuiltInPlayer: false
+    property string currentArtist: ""
+    property string currentAlbum: ""
     property var errorLog : new UPnP.dataStructures.Fifo();
 
     property int playerState: -1
@@ -237,6 +236,7 @@ ApplicationWindow
 
     function updateMprisMetaData(meta) {
         var jsonString= JSON.stringify(meta);
+        console.log(jsonString)
         upnp.mprisSetMetaData(jsonString);
     }
 

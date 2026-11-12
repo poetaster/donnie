@@ -10,8 +10,8 @@ import Sailfish.Silica 1.0
 import Sailfish.Media 1.0               // for MediaKey
 import QtMultimedia 5.5
 import org.nemomobile.policy 1.0        // for Permissions
-import org.nemomobile.configuration 1.0 // for ConfigurationValue
-
+import Nemo.DBus 2.0
+import Nemo.Configuration 1.0
 import "../UPnP.js" as UPnP
 
 Page {
