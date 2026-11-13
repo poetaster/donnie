@@ -15,8 +15,8 @@ Name:       donnie
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    UPnP Controller with built in Player
-Version:    1.0
-Release:    2
+Version:    1.1
+Release:    1
 Group:      Applications/Multimedia
 License:    MIT
 URL:        https://github.com/wdehoog/donnie
@@ -28,8 +28,8 @@ BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  libupnp-devel
-BuildRequires:  mpris-qt5-devel
+BuildRequires:  pkgconfig(libupnpp)
+BuildRequires:  pkgconfig(mpris-qt5-devel)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 

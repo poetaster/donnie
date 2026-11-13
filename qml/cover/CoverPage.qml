@@ -80,7 +80,7 @@ CoverBackground {
             text: labelText2
             horizontalAlignment: Text.AlignHCenter
             visible: imageSource === defaultImageSource
-            font.pixelSize: Theme.fontSizeSmall
+            font.pixelSize: Theme.fontSizeExtraSmall
             color: Theme.primaryColor
 
             NumberAnimation on x {
@@ -127,6 +127,7 @@ CoverBackground {
     }
 
     function updateDisplayData(imageSource, text, trackClass) {
+        //nocover_audio.jpg
         //cover.imageSource = imageSource ? imageSource : defaultImageSource
         //labelText = text
         if(trackClass === UPnP.AudioItemType.AudioBroadcast) {
