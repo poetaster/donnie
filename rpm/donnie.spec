@@ -22,13 +22,14 @@ License:    MIT
 URL:        https://github.com/wdehoog/donnie
 Source0:    %{name}-%{version}.tar.gz
 Source1:    %{name}-rpmlintrc
+Source100:  donnie.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   mpris-qt5
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  pkgconfig(libupnpp)
+BuildRequires:  libupnpp >= 0.15.1
 BuildRequires:  mpris-qt5-devel
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
