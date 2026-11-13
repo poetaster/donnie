@@ -29,7 +29,7 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(libupnpp)
-BuildRequires:  pkgconfig(mpris-qt5-devel)
+BuildRequires:  mpris-qt5-devel
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
